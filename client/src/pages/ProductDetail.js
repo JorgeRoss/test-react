@@ -7,7 +7,6 @@ class ProductDetail extends Component {
     }
 
     componentDidMount() {
-
         this.getProductos().then(res => {
             console.log(res)
             this.setState({ product: res })
@@ -16,8 +15,11 @@ class ProductDetail extends Component {
 
     getProductos = async () => {
         const { params } = this.props.match;
-        const response = await fetch('/api/products/productDetail/' + params.id);
-        console.log(response)
+        const response = await fetch('/api/products/' + params.id);
+        if(response.status >= 300)
+        {
+            return document.location.href = "/404"
+        }
         const body = await response.json();
         return body;
     }
@@ -28,8 +30,6 @@ class ProductDetail extends Component {
                 {this.state.product.description}
             </div>
         )
-
-
     }
 }
 

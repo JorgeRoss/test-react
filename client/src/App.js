@@ -14,7 +14,6 @@ class App extends Component {
                           <Route exact path='/' component={ProductListView} />
                           <Route path='/product/:id' component={ProductDetail} />
                           <Route path='/404' component={Error404} />
-
                       </Switch>
           </BrowserRouter>
         </div>

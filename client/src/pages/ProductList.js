@@ -16,7 +16,7 @@ class ProductList extends Component {
     }
 
     getProductos = async () => {
-        const response = await fetch('/api/products/listProducts');
+        const response = await fetch('/api/products');
         console.log(response)
         const body = await response.json();
         return body;

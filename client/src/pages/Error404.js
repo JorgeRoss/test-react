@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 
 class Error404 extends Component {
     render() {
         return (
-            <div>                
-                Error 404
-            </div>
+            <section className="recuadro">
+                <div>Error 404</div>
+                <Link to={"/"}>Volver a listado de producto</Link>
+            </section>
+
         )
     }
 }
