@@ -59,6 +59,7 @@ app.get('/:id', (req, res) => {
 
             producto.findOne({ id: req.params.id }, (err, obj) => {
                 if (obj.enabled) {
+                    console.log(data)
                     res.status(200).send(data)
                 } else {
                     res.status(404).send({ message: 'Producto Inhabilitado' })

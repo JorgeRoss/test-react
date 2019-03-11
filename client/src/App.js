@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ProductListView from './pages/ProductList';
-import ProductDetail from './pages/ProductDetail';
-import Error404 from './pages/Error404';
+import ProductListView from './components/ProductList';
+import ProductDetail from './components/ProductDetail';
+import Error404 from './components/Error404';
 
 
 class App extends Component {
